@@ -1,0 +1,1 @@
+"use strict";function goHome(){window.location.href="index.html"}document.addEventListener("DOMContentLoaded",function(){var finalScore=new URLSearchParams(window.location.search).get("score")||0;document.getElementById("scoreValue").innerText=finalScore});

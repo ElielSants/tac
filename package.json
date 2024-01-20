@@ -1,0 +1,31 @@
+{
+  "name": "tac-plac",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "minify-html": "html-minifier-terser src/html/index.html --collapse-whitespace --output=dist/html/index.html && html-minifier-terser src/html/result.html --collapse-whitespace --output=dist/html/result.html",
+    "optmize-css" : "postcss src/css/styles.css --use autoprefixer cssnano postcss-pxtorem --output dist/css/styles.css --no-map",
+    "transpile-js": "babel src/js/script.js -o dist/js/script.js --presets=@babel/preset-env && babel src/js/result.js -o dist/js/result.js --presets=@babel/preset-env",
+    "minify-js-1" : "uglifyjs dist/js/script.js --compress -o dist/js/script.js",
+    "minify-js-2" : "uglifyjs dist/js/result.js --compress -o dist/js/result.js",
+    "build" : "npm run minify-html && npm run optmize-css && npm run transpile-js && npm run minify-js-1 && npm run minify-js-2",
+    "start": "npm run express"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.8",
+    "autoprefixer": "^10.4.17",
+    "cssnano": "^6.0.3",
+    "html-minifier-terser": "^7.2.0",
+    "postcss": "^8.4.33",
+    "postcss-cli": "^11.0.0",
+    "postcss-pxtorem": "^6.1.0",
+    "uglify-js": "^3.17.4"
+  }
+}
