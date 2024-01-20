@@ -1,5 +1,4 @@
 let points = 0;
-let clicks = 0;
 let timer;
 let gameInProgress = false;
 
@@ -9,7 +8,7 @@ function startGame() {
     document.getElementById('startBtn').textContent = 'Iniciar';
   } else {
     updatePoints();
-    startTimer(45);
+    startTimer(5);
     gameInProgress = true;
     document.getElementById('startBtn').textContent = 'Reiniciar';
 
@@ -25,7 +24,8 @@ function addPoint() {
 
 function storeClick() {
   if (gameInProgress) {
-    clicks++;
+    points *= 2;
+    updatePoints();
   }
 }
 
@@ -48,9 +48,8 @@ function startTimer(duration) {
 }
 
 function showResult() {
-  let result = points * clicks;
   // Redireciona para a página de resultado com a pontuação final
-  window.location.href = `result.html?score=${result}`;
+  window.location.href = `result.html?score=${points}`;
   gameInProgress = false; // Define que o jogo não está mais em andamento
 }
 
@@ -69,5 +68,4 @@ function resetGame() {
   document.getElementById('points').textContent = '0';
   gameInProgress = false;
   points = 0;
-  clicks = 1;
 }
