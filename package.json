@@ -5,12 +5,16 @@
   "main": "index.js",
   "scripts": {
     "minify-html": "html-minifier-terser src/html/index.html --collapse-whitespace --output=dist/html/index.html && html-minifier-terser src/html/result.html --collapse-whitespace --output=dist/html/result.html",
-    "optmize-css" : "postcss src/css/styles.css --use autoprefixer cssnano postcss-pxtorem --output dist/css/styles.css --no-map",
+    "optmize-css": "postcss src/css/styles.css --use autoprefixer cssnano postcss-pxtorem --output dist/css/styles.css --no-map",
     "transpile-js": "babel src/js/script.js -o dist/js/script.js --presets=@babel/preset-env && babel src/js/result.js -o dist/js/result.js --presets=@babel/preset-env",
-    "minify-js-1" : "uglifyjs dist/js/script.js --compress -o dist/js/script.js",
-    "minify-js-2" : "uglifyjs dist/js/result.js --compress -o dist/js/result.js",
-    "build" : "npm run minify-html && npm run optmize-css && npm run transpile-js && npm run minify-js-1 && npm run minify-js-2",
-    "start": "npm run express"
+    "minify-js-1": "uglifyjs dist/js/script.js --compress -o dist/js/script.js",
+    "minify-js-2": "uglifyjs dist/js/result.js --compress -o dist/js/result.js",
+    "build": "npm run minify-html && npm run optmize-css && npm run transpile-js && npm run minify-js-1 && npm run minify-js-2",
+    "open-my-html-dev": "open-cli src/html/index.html",
+    "open-my-html-prod": "open-cli dist/html/index.html",
+
+    "start:dev": "npm run open-my-html-dev",
+    "start:prod": "npm run open-my-html-prod"
 
   },
   "keywords": [],
@@ -23,6 +27,7 @@
     "autoprefixer": "^10.4.17",
     "cssnano": "^6.0.3",
     "html-minifier-terser": "^7.2.0",
+    "open-cli": "^8.0.0",
     "postcss": "^8.4.33",
     "postcss-cli": "^11.0.0",
     "postcss-pxtorem": "^6.1.0",

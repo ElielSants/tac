@@ -1,20 +1,20 @@
 body {
   font-family: Arial, sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   margin: 0;
   padding: 0;
   background-color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 100vh;
 }
 
 .container {
-  max-width: 80vh;
-  margin: 50px auto;
+  max-width: 90%;
+  margin: 20px auto;
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -30,25 +30,26 @@ h1 {
 
 .buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around; /* Alterado para distribuir espaço igual entre os botões */
   margin-top: 20px;
 }
 
 button {
-  padding: 10px;
+  flex: 1; /* Faz com que os botões ocupem a mesma largura */
+  padding: 15px; /* Aumenta o tamanho do botão */
+  margin: 0 10px; /* Adiciona espaço entre os botões */
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-#points{
-  font-size: 70px;
+#points {
+  font-size: 50px;
 }
 
 #blackBtn {
   background-color: #000;
   color: #fff;
-  padding: 30px
 }
 
 #yellowBtn {
@@ -57,13 +58,8 @@ button {
 }
 
 button {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
 
 button:active {
   transform: scale(0.9);
@@ -74,28 +70,21 @@ button:active {
 }
 
 #startBtn {
-  position: relative;
-  top: -21vh;
-  left: 11.5vw;
-  font-size: 40px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#homeBtn{
-  position: relative;
-  top: 1vh;
-  //left: 11.5vw;
   font-size: 30px;
   background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 20px;
 }
 
-
-
+#homeBtn {
+  font-size: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
