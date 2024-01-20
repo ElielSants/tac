@@ -8,7 +8,7 @@ function startGame() {
     document.getElementById('startBtn').textContent = 'Iniciar';
   } else {
     updatePoints();
-    startTimer(5);
+    startTimer(45);
     gameInProgress = true;
     document.getElementById('startBtn').textContent = 'Reiniciar';
 
