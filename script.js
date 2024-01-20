@@ -9,7 +9,7 @@ function startGame() {
     document.getElementById('startBtn').textContent = 'Iniciar';
   } else {
     updatePoints();
-    startTimer(5); // Alterado para 15 segundos para fins de teste
+    startTimer(45);
     gameInProgress = true;
     document.getElementById('startBtn').textContent = 'Reiniciar';
 
@@ -57,7 +57,7 @@ function showResult() {
 function resetTimer() {
   clearInterval(timer);
   
-  document.getElementById('countdown').textContent = '15';
+  document.getElementById('countdown').textContent = '45';
   gameInProgress = false;
   document.getElementById('resetBtn').style.display = 'none';
   document.getElementById('startBtn').style.display = 'block';
@@ -65,7 +65,7 @@ function resetTimer() {
 
 function resetGame() {
   clearInterval(timer);
-  document.getElementById('countdown').textContent = '5';
+  document.getElementById('countdown').textContent = '45';
   document.getElementById('points').textContent = '0';
   gameInProgress = false;
   points = 0;
