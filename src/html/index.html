@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Contador de Pontos</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Contador de Pontos</h1>
+    <div id="gameContent">
+      <button id="startBtn" onclick="startGame()">Iniciar</button>
+      <div class="scoreboard">
+        <h2 id="points">0</h2>
+        <p id="timer">Tempo: <span id="countdown">15</span>s</p>
+      </div>
+      <div class="buttons">
+        <button id="blackBtn" onclick="addPoint()">+1</button>
+        <button id="yellowBtn" onclick="storeClick()">Multiplicador</button>
+      </div>
+    </div>
+  </div>
+  <script src="../js/script.js"></script>
+</body>
+</html>

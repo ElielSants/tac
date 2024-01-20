@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.container {
+  max-width: 80vh;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.scoreboard {
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#points{
+  font-size: 70px;
+}
+
+#blackBtn {
+  background-color: #000;
+  color: #fff;
+  padding: 30px
+}
+
+#yellowBtn {
+  background-color: #ff0;
+  color: #000;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+button:active {
+  transform: scale(0.9);
+}
+
+#buttonContainer {
+  position: relative;
+}
+
+#startBtn {
+  position: relative;
+  top: -21vh;
+  left: 11.5vw;
+  font-size: 40px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#homeBtn{
+  position: relative;
+  top: 1vh;
+  //left: 11.5vw;
+  font-size: 30px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
