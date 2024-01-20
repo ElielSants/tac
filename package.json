@@ -13,8 +13,8 @@
     "open-my-html-dev": "open-cli src/html/index.html",
     "open-my-html-prod": "open-cli dist/html/index.html",
 
-    "start:dev": "npm run open-my-html-dev",
-    "start:prod": "npm run open-my-html-prod"
+    "start:dev": "npm run build && npm run open-my-html-dev",
+    "start:prod": "npm run build && npm run open-my-html-prod"
 
   },
   "keywords": [],
